@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CORS test</title>
+    <script>
+      (async () => {
+        const res = await fetch('http://localhost:3000/resource.json');
+        const el = document.createElement('prev');
+        el.textContent = JSON.stringify(await res.json(), null, 2);
+        document.body.appendChild(el);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
