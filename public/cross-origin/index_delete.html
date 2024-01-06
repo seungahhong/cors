@@ -9,10 +9,10 @@
         const res = await fetch('http://localhost:4001/response.json', {
           method: 'DELETE',
         });
-        const el = document.createElement('data');
         const json = await res.json();
-        el.textContent = JSON.stringify(json);
-        document.body.appendChild(el);
+        var newNode = document.createElement('div');
+        newNode.innerHTML = JSON.stringify(json);
+        document.body.appendChild(newNode);
       })();
     </script>
   </head>

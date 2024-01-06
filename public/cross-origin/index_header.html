@@ -11,10 +11,10 @@
             unsafe: 'hello',
           },
         });
-        const el = document.createElement('data');
         const json = await res.json();
-        el.textContent = JSON.stringify(json);
-        document.body.appendChild(el);
+        var newNode = document.createElement('div');
+        newNode.innerHTML = JSON.stringify(json);
+        document.body.appendChild(newNode);
       })();
     </script>
   </head>
